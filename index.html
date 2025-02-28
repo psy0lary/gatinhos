@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site com Imagem</title>
+    <title>Imagens em Linha</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,97 +11,30 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 20px;
-            background-color: #fff;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
         .imagem-container {
-            text-align: center;
-            margin: 20px 0;
+            display: flex; /* Usa flexbox para alinhar as imagens */
+            justify-content: space-between; /* Distribui o espaço entre as imagens */
+            align-items: center; /* Centraliza verticalmente */
+            width: 100%; /* Ocupa toda a largura disponível */
+            max-width: 1200px; /* Define uma largura máxima para o container */
+            margin: 0 auto; /* Centraliza o container na página */
+            padding: 20px;
         }
         .imagem-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            width: 30%; /* Define a largura de cada imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 8px; /* Bordas arredondadas */
+            object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Meu Site com Imagem</h1>
-    </header>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-    </nav>
-
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Este é o conteúdo da seção Home.</p>
-        </section>
-
-        <section id="sobre">
-            <h2>Sobre</h2>
-            <p>Este é o conteúdo da seção Sobre.</p>
-        </section>
-
-        <section id="servicos">
-            <h2>Serviços</h2>
-            <p>Este é o conteúdo da seção Serviços.</p>
-        </section>
-
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Este é o conteúdo da seção Contato.</p>
-        </section>
-
-        <!-- Espaço para colocar a imagem -->
-        <div class="imagem-container">
-            <img src="https://images.tcdn.com.br/img/img_prod/770361/kit_com_4_xicaras_e_4_pires_rosa_confie_no_tempo_para_cafe_75ml_1007_1_7fa4359718364ba1d937233e86d5f4b7.jpg" alt="Descrição da Imagem">
-            <img src="https://oxfordporcelanas.vteximg.com.br/arquivos/ids/176784-1000-1000/116234-1.jpg?v=637859630357330000" alt="Descrição da Imagem">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF3hxF8-DNqEGIPyUYxr4ps4sStqi9d2oEdQ&s" alt="Descrição da Imagem">
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Meu Site. Todos os direitos reservados.</p>
-    </footer>
+    <div class="imagem-container">
+        <img src="https://images.tcdn.com.br/img/img_prod/770361/kit_com_4_xicaras_e_4_pires_rosa_confie_no_tempo_para_cafe_75ml_1007_1_7fa4359718364ba1d937233e86d5f4b7.jpg" alt="Xícara rosa">
+        <img src="https://oxfordporcelanas.vteximg.com.br/arquivos/ids/176784-1000-1000/116234-1.jpg?v=637859630357330000" alt="Xícara branca">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF3hxF8-DNqEGIPyUYxr4ps4sStqi9d2oEdQ&s" alt="Xícara decorada">
+    </div>
 
 </body>
 </html>
