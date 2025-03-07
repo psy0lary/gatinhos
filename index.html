@@ -3,38 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagens em Linha</title>
+    <title>Galeria de Imagens</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #800080; /* Fundo roxo */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        .imagem-container {
-            display: flex; /* Usa flexbox para alinhar as imagens */
-            justify-content: space-between; /* Distribui o espaço entre as imagens */
-            align-items: center; /* Centraliza verticalmente */
-            width: 100%; /* Ocupa toda a largura disponível */
-            max-width: 2200px; /* Define uma largura máxima para o container */
-            margin: 0 auto; /* Centraliza o container na página */
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px; /* Espaço entre as imagens */
             padding: 20px;
+            max-width: 1200px;
         }
-        .imagem-container img {
-            width: 30%; /* Define a largura de cada imagem */
-            height: auto; /* Mantém a proporção da imagem */
-            border-radius: 8px; /* Bordas arredondadas */
+
+        .gallery img {
+            width: 200px; /* Largura fixa para todas as imagens */
+            height: 200px; /* Altura fixa para todas as imagens */
             object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+            border: 5px solid white; /* Borda branca */
+            border-radius: 10px; /* Cantos arredondados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
         }
     </style>
 </head>
 <body>
 
-    <div class="imagem-container">
-        <img src="https://cdn.shopify.com/s/files/1/0500/8965/6473/files/Foto_2_4b6199ea-6995-4584-a10d-ee1d47cc2cdd.png?v=1718646293" alt="MAINE COON/7000 REAIS">
-        <img src="https://www.infoescola.com/wp-content/uploads/2010/12/Gato-Angor%C3%A1-Turco_400603273.jpg" alt="ANGORA/3000 REAIS">
-        <img src="https://previews.123rf.com/images/gelpi/gelpi2005/gelpi200507017/146877657-gato-persa-ador%C3%A1vel-isolado-em-um-fundo-preto.jpg">
+    <div class="gallery">
+        <img src="https://via.placeholder.com/200" alt="Imagem 1">
+        <img src="https://via.placeholder.com/200" alt="Imagem 2">
+        <img src="https://via.placeholder.com/200" alt="Imagem 3">
+        <img src="https://via.placeholder.com/200" alt="Imagem 4">
+        <img src="https://via.placeholder.com/200" alt="Imagem 5">
+        <img src="https://via.placeholder.com/200" alt="Imagem 6">
     </div>
 
 </body>
 </html>
+
